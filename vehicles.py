@@ -7,3 +7,10 @@
 
 import sys
 import os.path
+
+class Vehicle_list:
+    def __init__(self, model,make,year=2021):
+        self.__model = model
+        self.__make = make
+        self.__year = int(year)
+        self.__speed = 0
