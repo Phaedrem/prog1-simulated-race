@@ -7,7 +7,7 @@
 
 import sys
 import os.path
-import vehicles as vh
+import car as Car
 
 
 def main():
@@ -19,10 +19,6 @@ def main():
             print("Error: you must enter one-and-only-one parameter that is a valid file name.")
     else:
         print("Error: you must enter one-and-only-one parameter that is a valid file name.")
-
-
-
-
 
 
 
