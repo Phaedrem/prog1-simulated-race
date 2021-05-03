@@ -11,10 +11,14 @@ import vehicles as vh
 
 
 def main():
-
-
-
-
+    argc = len(sys.argv)
+    if argc==2:
+        if os.path.isfile(sys.argv[1]):
+            pass
+        else:
+            print("Error: you must enter one-and-only-one parameter that is a valid file name.")
+    else:
+        print("Error: you must enter one-and-only-one parameter that is a valid file name.")
 
 
 
