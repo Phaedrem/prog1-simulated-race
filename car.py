@@ -36,3 +36,8 @@ class Car:
             self.__year = year
         else:
             self.__year = 2021
+            
+    def displayCar(self):
+        print('Make:',self.getMake())
+        print('Model:',self.getModel())
+        print('Year:',self.getYear())
