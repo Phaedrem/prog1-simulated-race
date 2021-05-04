@@ -13,7 +13,7 @@ MINIMUM_SPEED = 0
 
 class Car:
     
-    def __init__(self, make, model, year=2021):
+    def __init__(self, make, model, year):
         self.__setMake(make)
         self.__setModel(model)
         self.__setYear(year)
@@ -38,9 +38,12 @@ class Car:
         self.__model = model
 
     def __setYear(self,year):
-        if isinstance(year,int) and (year >= 1910 and year <= 2021):
-            self.__year = year
-        else:
+        try:
+            self.__year = int(year)
+            if (self.__year >= 1910 and self.__year <= 2021):
+                self.__year = year
+            else: self.__year = 2021
+        except:
             self.__year = 2021
             
     def displayCar(self):
