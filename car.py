@@ -47,3 +47,9 @@ class Car:
         print('Year:',self.getYear())
 
 
+    def accelerate(self):
+        chance = random.randint(0,1)
+        if chance == 0:
+            self.__speed += 5
+        else:
+            self.__speed += 10
