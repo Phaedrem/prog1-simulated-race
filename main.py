@@ -21,10 +21,16 @@ def main():
                 line_list = stripped_line.split(',')
                 length = len(line_list)
                 if length >= 2 and length < 4:
-                    standInList.append(line_list)
-                car_count = len(standInList)
-            print(car_count)
-            print(standInList)
+                    make = line_list[0]
+                    model = line_list[1]
+                    if length == 3:
+                        year = line_list[2]
+                    else:
+                        year = ''
+                myCars =[Car(make,model,year)]
+                standInList.append(myCars)
+            for car in standInList:
+                car.displayCar()
             a_file.close()
         else:
             print("Error: you must enter one-and-only-one parameter that is a valid file name.")
