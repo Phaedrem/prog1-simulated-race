@@ -53,3 +53,10 @@ class Car:
             self.__speed += 5
         else:
             self.__speed += 10
+
+    def decelerate(self):
+        chance = random.randint(0,1)
+        if chance == 0:
+            self.__speed -= 5
+        else:
+            self.__speed -= 10
