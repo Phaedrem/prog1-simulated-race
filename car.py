@@ -11,9 +11,9 @@ import os.path
 class Car:
     
     def __init__(self, make, model, year=2021):
-        self.__model = model
-        self.__make = make
-        self.__year = year
+        __setMake(make)
+        __setModel(model)
+        __setYear(year)
         self.__speed = 0
 
     def getMake(self):
@@ -24,3 +24,12 @@ class Car:
 
     def getYear(self):
         return(self.__year)
+
+    def __setMake(self,make):
+        self.__make = make
+
+    def __setModel(self,model):
+        self.__model = model
+
+    def __setYear(self,year):
+        self.__year = year
