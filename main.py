@@ -14,7 +14,13 @@ def main():
     argc = len(sys.argv)
     if argc==2:
         if os.path.isfile(sys.argv[1]):
-            pass
+            a_file = open(sys.argv[1], 'r')
+            text = 0
+            for line in a_file:
+                stripped_line = line.strip()
+                line_list = stripped_line.split(',')
+                print(line_list)
+            a_file.close()
         else:
             print("Error: you must enter one-and-only-one parameter that is a valid file name.")
     else:
