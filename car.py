@@ -10,7 +10,7 @@ import os.path
 
 class Cars:
     
-    def __init__(self, model, make, year=2021):
+    def __init__(self, make, model, year=2021):
         self.__model = model
         self.__make = make
         self.__year = int(year)
