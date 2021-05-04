@@ -15,10 +15,12 @@ def main():
     if argc==2:
         if os.path.isfile(sys.argv[1]):
             a_file = open(sys.argv[1], 'r')
-            text = 0
             for line in a_file:
                 stripped_line = line.strip()
                 line_list = stripped_line.split(',')
+                length = len(line_list)
+                if length < 2:
+                    line_list.clear()
                 print(line_list)
             a_file.close()
         else:
