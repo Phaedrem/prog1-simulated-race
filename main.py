@@ -7,7 +7,7 @@
 
 import sys
 import os.path
-import car as Car
+from car import Car
 
 
 def main():
