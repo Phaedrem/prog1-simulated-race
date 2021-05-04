@@ -7,6 +7,7 @@
 
 import sys
 import os.path
+import random
 
 class Car:
     
@@ -25,6 +26,9 @@ class Car:
     def getYear(self):
         return(self.__year)
 
+    def getSpeed(self):
+        return(self.__speed)
+
     def __setMake(self,make):
         self.__make = make
 
@@ -41,3 +45,5 @@ class Car:
         print('Make:',self.getMake())
         print('Model:',self.getModel())
         print('Year:',self.getYear())
+
+
