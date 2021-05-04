@@ -9,6 +9,8 @@ import sys
 import os.path
 import random
 
+MINIMUM_SPEED = 0
+
 class Car:
     
     def __init__(self, make, model, year=2021):
@@ -60,3 +62,5 @@ class Car:
             self.__speed -= 5
         else:
             self.__speed -= 10
+        if self.__speed < MINIMUM_SPEED:
+            self.__speed = MINIMUM_SPEED
