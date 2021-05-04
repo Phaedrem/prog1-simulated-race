@@ -11,6 +11,7 @@ from car import Car
 
 
 def main():
+    standInList = []
     argc = len(sys.argv)
     if argc==2:
         if os.path.isfile(sys.argv[1]):
@@ -19,9 +20,11 @@ def main():
                 stripped_line = line.strip()
                 line_list = stripped_line.split(',')
                 length = len(line_list)
-                if length < 2:
-                    line_list.clear()
-                print(line_list)
+                if length >= 2 and length < 4:
+                    standInList.append(line_list)
+                car_count = len(standInList)
+            print(car_count)
+            print(standInList)
             a_file.close()
         else:
             print("Error: you must enter one-and-only-one parameter that is a valid file name.")
