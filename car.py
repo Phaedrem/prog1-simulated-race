@@ -38,7 +38,10 @@ class Car:
             self.__make = make
 
     def __setModel(self,model):
-        self.__model = model
+        if model == '':
+            raise ValueError
+        else:
+            self.__model = model
 
     def __setYear(self,year):
         try:
