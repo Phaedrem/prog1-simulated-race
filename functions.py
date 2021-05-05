@@ -9,6 +9,11 @@ import sys
 import os.path
 from car import Car
 
+FIRST_LAP = 20
+PIT_STOP = 10
+SECOND_LAP = 5
+GO_HOME = 100
+
 def make_list(file):
     myCars = []
     a_file = open(sys.argv[1], 'r')
@@ -29,3 +34,15 @@ def make_list(file):
                 pass
     return(myCars)
     a_file.close()
+
+def race(myCars):
+    for speed in range(FIRST_LAP):
+        for cars in myCars:
+            cars.accelerate()
+    for speed in range(PIT_STOP):
+        for cars in myCars:
+            cars.decelerate()
+    for speed in range(SECOND_LAP):
+        for cars in myCars:
+            cars.accelerate()    
+    return(myCars)
