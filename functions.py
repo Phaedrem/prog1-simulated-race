@@ -46,3 +46,9 @@ def race(myCars):
         for cars in myCars:
             cars.accelerate()    
     return(myCars)
+
+def stop(myCars):
+    for speed in range(GO_HOME)
+        for cars in myCars:
+            cars.decelerate()
+    return(myCars)
