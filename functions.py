@@ -23,6 +23,9 @@ def make_list(file):
                 year = line_list[2]
             else:
                 year = ''
-            myCars.append(Car(make,model,year))
+            try:
+                myCars.append(Car(make,model,year))
+            except:
+                pass
     return(myCars)
     a_file.close()
