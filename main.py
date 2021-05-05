@@ -11,10 +11,18 @@ from car import Car
 import functions as fn
 
 def main():
+    line_count = 0
     argc = len(sys.argv)
     if argc==2 and os.path.isfile(sys.argv[1]):
-        for i in fn.make_list(sys.argv[1]):
-            i.displayCar()
+        print('\nloading cars from file...')
+        words = len(fn.make_list(sys.argv[1]))
+        print('done.\n')
+        print(words, 'cars loaded...')
+        for lines in fn.make_list(sys.argv[1]):
+            line_count += 1
+            print(line_count)
+            lines.displayCar()
+            print()
     else:
         print("Error: you must enter one-and-only-one parameter that is a valid file name.")
 
