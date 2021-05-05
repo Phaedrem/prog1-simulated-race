@@ -10,7 +10,7 @@ import os.path
 from car import Car
 
 def make_list(file):
-    standInList = []
+    myCars = []
     a_file = open(sys.argv[1], 'r')
     for line in a_file:
         stripped_line = line.strip()
@@ -23,6 +23,6 @@ def make_list(file):
                 year = line_list[2]
             else:
                 year = ''
-            standInList.append(Car(make,model,year))
-    return(standInList)
+            myCars.append(Car(make,model,year))
+    return(myCars)
     a_file.close()
