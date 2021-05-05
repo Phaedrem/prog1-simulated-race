@@ -33,7 +33,7 @@ class Car:
 
     def __setMake(self,make):
         if make == '':
-            raise ValueError:
+            raise ValueError
         else:
             self.__make = make
 
