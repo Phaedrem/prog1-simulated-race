@@ -15,9 +15,9 @@ def main():
     argc = len(sys.argv)
     if argc==2 and os.path.isfile(sys.argv[1]):
         print('\nloading cars from file...')
-        words = len(fn.make_list(sys.argv[1]))
+        car_count = len(fn.make_list(sys.argv[1]))
         print('done.\n')
-        print(words, 'cars loaded...')
+        print(car_count, 'cars loaded...')
         for lines in fn.make_list(sys.argv[1]):
             line_count += 1
             print(line_count)
