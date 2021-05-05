@@ -32,7 +32,10 @@ class Car:
         return(self.__speed)
 
     def __setMake(self,make):
-        self.__make = make
+        if make == '':
+            raise ValueError:
+        else:
+            self.__make = make
 
     def __setModel(self,model):
         self.__model = model
