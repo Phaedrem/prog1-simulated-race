@@ -21,14 +21,25 @@ def main():
     argc = len(sys.argv)
     if argc==2 and os.path.isfile(sys.argv[1]):
         print('\nloading cars from file...')
-        car_count = len(fn.make_list(sys.argv[1]))
         myCars = fn.make_list(sys.argv[1])
+        car_count = len(myCars)
         print('done.\n')
         print(car_count, 'cars loaded...')
         for lines in myCars:
             line_count += 1
             print(line_count)
             lines.displayCar()
+        print('\nLet the race begin...')
+        for speed in range(FIRST_LAP):
+            for cars in myCars:
+                cars.accelerate()
+        for speed in range(PIT_STOP):
+            for cars in myCars:
+                cars.decelerate()
+        for speed in range(SECOND_LAP):
+            for cars in myCars:
+                cars.accelerate()
+        print('done')
         
             
     else:
