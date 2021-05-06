@@ -40,6 +40,12 @@ def main():
             print(cars.getMake(),cars.getModel(), 'ended at', cars.getSpeed())
   
         print('\nThe winner is:', winning_make, winning_model, 'at',speed)
+        print('\nHitting the brakes 100 times on each car...')
+        fn.stop(myCars)
+        print('done\n\nCars final speed...')
+        for cars in myCars:
+            print(cars.getModel(), ':', cars.getSpeed())
+        
     else:
         print("Error: you must enter one-and-only-one parameter that is a valid file name.")
 
