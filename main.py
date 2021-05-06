@@ -15,19 +15,19 @@ import functions as fn
 
 def main():
     speed = 0
-    winning_model = 0
-    winning_make = 0
-    line_count = 0
+    winningModel = 0
+    winningMake = 0
+    lineCount = 0
     argc = len(sys.argv)
     if argc==2 and os.path.isfile(sys.argv[1]):
         print('\nloading cars from file...')
         myCars = fn.make_list(sys.argv[1])
-        car_count = len(myCars)
+        carCount = len(myCars)
         print('done.\n')
-        print(car_count, 'cars loaded...')
+        print(carCount, 'cars loaded...')
         for lines in myCars:
-            line_count += 1
-            print(line_count)
+            lineCount += 1
+            print(lineCount)
             lines.displayCar()
         print('\nLet the race begin...')
         fn.race(myCars)
@@ -35,11 +35,11 @@ def main():
         for cars in myCars:
             if cars.getSpeed() > speed:
                 speed = cars.getSpeed()
-                winning_model = cars.getModel()
-                winning_make = cars.getMake()
+                winningModel = cars.getModel()
+                winningMake = cars.getMake()
             print(cars.getMake(),cars.getModel(), 'ended at', cars.getSpeed())
   
-        print('\nThe winner is:', winning_make, winning_model, 'at',speed)
+        print('\nThe winner is:', winningMake, winningModel, 'at',speed)
         print('\nHitting the brakes 100 times on each car...')
         fn.stop(myCars)
         print('done\n\nCars final speed...')
