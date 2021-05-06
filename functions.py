@@ -21,10 +21,10 @@ def make_list(file):
         stripped_line = line.strip()
         line_list = stripped_line.split(',')
         length = len(line_list)
-        if length >= 2 and length < 4:
+        if length >= 2:
             make = line_list[0]
             model = line_list[1]
-            if length == 3:
+            if length >= 3:
                 year = line_list[2]
             else:
                 year = ''
