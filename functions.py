@@ -32,8 +32,8 @@ def make_list(file):
                 myCars.append(Car(make,model,year))
             except:
                 pass
-    return(myCars)
     a_file.close()
+    return(myCars)
 
 def race(myCars):
     for speed in range(FIRST_LAP):
